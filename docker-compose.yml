@@ -1,0 +1,9 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+      - "80:5000"
+    volumes:
+      - /home/redwan/Desktop/redwan/pdev/programming/python/flask/Flask_Blog:/app
+    container_name: flaskblog_web_1
