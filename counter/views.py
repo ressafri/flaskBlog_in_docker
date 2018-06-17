@@ -1,9 +1,12 @@
+from counter.models import User, Post
+from datetime import datetime
 from flask import Flask, render_template, url_for, flash, redirect
+from flask_sqlalchemy import SQLAlchemy
 from app import app
-from forms import *
 from forms.forms import RegistrationForm, LoginForm
-
-app.config['SECRET_KEY'] = '8d4166e680b666960a70d96868024095'
+# from forms import *
+# from forms.forms import RegistrationForm, LoginForm
+db = SQLAlchemy(app)
 
 posts = [
     {
